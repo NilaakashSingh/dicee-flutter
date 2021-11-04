@@ -1,2 +1,2 @@
 # Dicee 🎲
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/dicee-demo.gif)
+![alt text](https://github.com/NilaakashSingh/mi_card_flutter/blob/master/Container_with_row_and_column.png)
