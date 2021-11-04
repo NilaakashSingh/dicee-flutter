@@ -39,9 +39,7 @@ class _DiceDynamicPageState extends State<DiceDynamicPage> {
             // Flat Button is deprecated
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  updateRandomisedDiceNumber();
-                });
+                updateRandomisedDiceNumber();
                 print('Left button got pressed');
               },
               child: Image.asset('images/dice$leftDiceNumber.png'),
@@ -51,9 +49,7 @@ class _DiceDynamicPageState extends State<DiceDynamicPage> {
             // Flat Button is deprecated
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  updateRandomisedDiceNumber();
-                });
+                updateRandomisedDiceNumber();
                 print('Right button got pressed');
               },
               child: Image.asset('images/dice$rightDiceNumber.png'),
@@ -65,7 +61,9 @@ class _DiceDynamicPageState extends State<DiceDynamicPage> {
   }
 
   void updateRandomisedDiceNumber() {
-    leftDiceNumber = Random().nextInt(6) + 1;
-    rightDiceNumber = Random().nextInt(6) + 1;
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
   }
 }
