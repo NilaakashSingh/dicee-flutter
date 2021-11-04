@@ -40,7 +40,7 @@ class _DiceDynamicPageState extends State<DiceDynamicPage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
+                  updateRandomisedDiceNumber();
                 });
                 print('Left button got pressed');
               },
@@ -52,7 +52,7 @@ class _DiceDynamicPageState extends State<DiceDynamicPage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  rightDiceNumber = Random().nextInt(6) + 1;
+                  updateRandomisedDiceNumber();
                 });
                 print('Right button got pressed');
               },
@@ -62,5 +62,10 @@ class _DiceDynamicPageState extends State<DiceDynamicPage> {
         ],
       ),
     );
+  }
+
+  void updateRandomisedDiceNumber() {
+    leftDiceNumber = Random().nextInt(6) + 1;
+    rightDiceNumber = Random().nextInt(6) + 1;
   }
 }
